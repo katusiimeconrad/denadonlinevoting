@@ -1,4 +1,24 @@
 
+    <!-- 
+      This is the footer section of the site
+    -->
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="h3">Allan Bronson Conrad Sula</span>
+      </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
