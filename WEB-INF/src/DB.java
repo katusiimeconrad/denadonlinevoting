@@ -1,4 +1,4 @@
-package com.kon;
+package com.denad;
 import java.io.*;
 import java.sql.*;
 
@@ -10,7 +10,7 @@ public class DB {
         String username = "sean";
         String password = "nalwanga";
         try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Class.forName("com.mysql.jdbc.Driver");
         } catch( ClassNotFoundException e ) {
             e.printStackTrace();
         }

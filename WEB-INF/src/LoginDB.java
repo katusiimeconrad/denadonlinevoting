@@ -1,31 +1,21 @@
-package com.kon;
-import java.io.*;
-import java.sql.*;
-import com.kon.DB.*;
+package com.denad;
 
-import javax.servlet.*; 
-import javax.servlet.http.*; 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+import com.denad.DB.*;
 
 public class LoginDB extends HttpServlet { 
     /*
-    public Boolean works() throws SQLException, InstantiationException, IllegalAccessException {
-        String dbURL = "jdbc:mysql://localhost:3306/kone";
-        String username = "sean";
-        String password = "nalwanga";
-        try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-        } catch( ClassNotFoundException e ) {
-            e.printStackTrace();
-        }
+        This class servlet is for testing connection. It uses the DB class to connect.
+        Configure DB.java .
+        **********Yet to fix
 
-        
-        Connection con = DriverManager.getConnection( dbURL, username, password );
-
-       if ( con != null ) {
-           return true ;
-       }
-       else return false;
-    } */
+    */
 
     public void doGet ( HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {

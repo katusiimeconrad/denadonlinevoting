@@ -1,4 +1,4 @@
-package com.kon;
+package com.denad;
 import java.io.*; 
 import javax.servlet.*; 
 import javax.servlet.http.*; 
@@ -15,11 +15,14 @@ public class LoginBeta extends HttpServlet {
             PrintWriter out = response.getWriter();
             
             try {
-                String dbURL = "jdbc:mysql://localhost:3306/kone";
+                //The link to the database, has to be reconfigured for different systems
+                String dbURL = "jdbc:mysql://localhost:3306/denad";
                 String dbUname = "sean";
-                String dbPass = "nalwanga";
+                String dbPass = "12345678";
 
                 Class.forName("com.mysql.jdbc.Driver");
+                //Additional classes shall be loaded here
+                //Windows, Linux , and anyother OS
 
                 Connection con = DriverManager.getConnection( dbURL, dbUname, dbPass );
                 Statement st = con.createStatement();
@@ -30,6 +33,8 @@ public class LoginBeta extends HttpServlet {
 
                 if( rs.next()){
                    // out.println("Howdy , " + rs.getString("name"));
+                   //Starting a session for login
+                   
                     String username = rs.getString("name");
                     HttpSession session = request.getSession();
 
