@@ -48,7 +48,7 @@ public class LoginBeta extends HttpServlet {
                 }
                 else {
                     //out.println("Invalid Login Credentials");
-                    RequestDispatcher rd = request.getRequestDispatcher("/Login.htm");
+                    RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
                     rd.forward( request, response );
 
                 }

@@ -1,4 +1,4 @@
-<%@ include file="header.jsp" %>
+
 <!-- 
     The main page content here
 -->
@@ -16,4 +16,3 @@
 <!--
     The content ends here.
 -->
-<%@ include file="footer.jsp" %>
