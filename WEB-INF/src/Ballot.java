@@ -1,0 +1,1 @@
+// Query the Database for candidates and make a result set object
