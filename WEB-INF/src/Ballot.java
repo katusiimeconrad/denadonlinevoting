@@ -1,3 +1,5 @@
+// Query the Database for candidates and make a result set object
+
 package com.denad;
 
 import java.io.*;
@@ -32,7 +34,7 @@ public class LoginServlet extends HttpServlet {
             Statement st = con.createStatement();
 
             //Check for student Number
-            String query = "SELECT * FROM Users WHERE StudentNo=" +  stdNo ;
+            String query = "select * from users where IsCandidate=1s;";
 
             ResultSet rs = st.executeQuery(query);
 

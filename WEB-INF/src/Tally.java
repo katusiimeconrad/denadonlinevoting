@@ -1,0 +1,1 @@
+// Adds a vote to th candidate chosen by the voter
