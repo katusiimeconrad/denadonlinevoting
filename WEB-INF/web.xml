@@ -1,15 +1,25 @@
 <web-app>
-
-
+    
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>com.denad.LoginBeta</servlet-class>
+        <servlet-class>com.denad.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>UpdatePasswordServlet</servlet-name>
+        <servlet-class>com.denad.UpdatePasswordServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UpdatePasswordServlet</servlet-name>
+        <url-pattern>/UpdatePassword</url-pattern>
+    </servlet-mapping>
+
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

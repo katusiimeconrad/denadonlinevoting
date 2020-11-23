@@ -1,3 +1,3 @@
 <p>
-    Welcome
+    Welcome <%= session.getAttribute("FirstName") %>
 </p>

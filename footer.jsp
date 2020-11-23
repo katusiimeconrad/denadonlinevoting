@@ -2,9 +2,10 @@
     <!-- 
       This is the footer section of the site
     -->
+    <hr>
     <footer class="footer mt-auto py-3">
       <div class="container">
-        <span class="h3">Allan Bronson Conrad Sula</span>
+        <span class="h3">Allan Bronson Conrad</span>
       </div>
     </footer>
     
