@@ -1,0 +1,2 @@
+Hi <%= request.getParameter("user") %>
+

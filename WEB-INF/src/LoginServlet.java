@@ -36,6 +36,7 @@ public class LoginServlet extends HttpServlet {
 
             ResultSet rs = st.executeQuery(query);
 
+
             
             if( rs.next() ){
                 //if true , this implies that the student number exists.
@@ -77,6 +78,8 @@ public class LoginServlet extends HttpServlet {
                         //Include User Information in the Session object
                         session.setAttribute("FirstName", rsn.getString("FirstName"));
                         session.setAttribute("LastName", rsn.getString("LastName"));
+                        session.setAttribute("UserInfo", rsn );
+
 
                         RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
                         rd.forward( request, response );
