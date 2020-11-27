@@ -1,9 +1,12 @@
 
 <div class="container">
+    <%= session.getAttribute("StudentNumber") %>
 <%
     String pass1 = request.getParameter("Password");
     String pass2 = request.getParameter("NewPassword");
     String verify = request.getParameter("Verify");
+
+   
 
 
     if( pass2.equals(pass1) ){
@@ -15,6 +18,7 @@
     }
 
     else if( pass2.equals(verify)){
+        session.setAttribute("NewPassword", pass2 );
         response.sendRedirect("UpdatePassword");
     }
     else {

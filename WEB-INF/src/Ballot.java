@@ -6,7 +6,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 
-public class UpdatePasswordServlet extends HttpServlet {
+public class Ballot extends HttpServlet {
 
     @Override
     public void doPost (HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
