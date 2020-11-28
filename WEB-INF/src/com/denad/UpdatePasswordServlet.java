@@ -15,6 +15,7 @@ public class UpdatePasswordServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String stdNo = (String) session.getAttribute("StudentNumber");
         String newPassword = (String) session.getAttribute("NewPassword");
+        stdNo.
         //The parameter value must have changed.
 
         response.setContentType("text/html");
@@ -37,7 +38,9 @@ public class UpdatePasswordServlet extends HttpServlet {
             String keyStr = "SHA2('allanbronsonconrad', 512)";
             String query = "UPDATE Users SET Password=AES_ENCRYPT('" + newPassword + "', " + keyStr + "), IsInitialLogin=0 WHERE StudentNo='"+ stdNo +"';";
             out.println(query);
+            
             int co = st.executeUpdate(query);
+            
             
             if( co == 1 ) {
 

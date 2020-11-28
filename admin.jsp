@@ -88,7 +88,22 @@
     </div>
 
     
+    <!-- Retrieve System Status -->
+<%
+    String status = "SELECT * ;
 
+    ResultSet rs = st.executeQuery(query);
+
+    if( rs.next()){
+
+%>
+
+    <div>
+        <form>
+            Voting Status   
+
+        </form>
+    </div>
     
 
 
