@@ -90,11 +90,11 @@
     
     <!-- Retrieve System Status -->
 <%
-    String status = "SELECT * ;
+    String status = "SELECT *" ;
 
-    ResultSet rs = st.executeQuery(query);
+    ResultSet rs1 = st.executeQuery(query);
 
-    if( rs.next()){
+    if( rs1.next()){
 
 %>
 
@@ -105,7 +105,9 @@
         </form>
     </div>
     
+<%
 
+    }
 
 
 %>

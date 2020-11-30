@@ -81,6 +81,11 @@ public class LoginServlet extends HttpServlet {
                         session.setAttribute("LastName", rsn.getString("LastName"));
                         session.setAttribute("UserInfo", rsn );
 
+                        if(rsn.getBoolean("IsAdmin")){
+                            RequestDispatcher adminDispatch = request.getRequestDispatcher("/admin.jsp");
+                            adminDispatch.forward( request, response );
+                            //forward the user to the admin page
+                        }
 
                         RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
                         rd.forward( request, response );

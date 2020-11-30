@@ -26,7 +26,6 @@ public class Ballot extends HttpServlet {
             String dbPass = "nalwanga";
             int counter = 0;
             String[] dbPosts = new String[13];
-            dpPosts.length = 0;
 
             Class.forName("com.mysql.jdbc.Driver");
             
