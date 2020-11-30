@@ -5,7 +5,7 @@ import java.sql.*;
 
 public class DB {
 
-    public Connection initiateConnection() throws SQLException, InstantiationException, IllegalAccessException {
+    public Connection getConnection() throws SQLException, InstantiationException, IllegalAccessException {
         String dbURL = "jdbc:mysql://localhost:3306/kone";
         String username = "sean";
         String password = "nalwanga";

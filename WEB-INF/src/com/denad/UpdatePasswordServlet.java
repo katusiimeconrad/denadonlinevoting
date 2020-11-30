@@ -11,8 +11,11 @@ public class UpdatePasswordServlet extends HttpServlet {
     @Override
     public void doPost (HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 
-        String newPassword = (String) request.getParameter("NewPassword");
-        String stdNo = (String) request.getParameter("StudentNumber");
+        //String newPassword = (String) request.getParameter("NewPassword");
+        HttpSession session = request.getSession();
+        String stdNo = (String) session.getAttribute("StudentNumber");
+        String newPassword = (String) session.getAttribute("NewPassword");
+        stdNo.
         //The parameter value must have changed.
 
         response.setContentType("text/html");
@@ -33,11 +36,13 @@ public class UpdatePasswordServlet extends HttpServlet {
 
             //The ENCRYPTION SETTINGS
             String keyStr = "SHA2('allanbronsonconrad', 512)";
-            String query = "UPDATE Users SET Password=AES_ENCRYPT(" + newPassword + ", " + keyStr + "), IsInitialLogin= false WHERE StudentNo=" +  stdNo + ";";
+            String query = "UPDATE Users SET Password=AES_ENCRYPT('" + newPassword + "', " + keyStr + "), IsInitialLogin=0 WHERE StudentNo='"+ stdNo +"';";
+            out.println(query);
             
             int co = st.executeUpdate(query);
-
-            if( co == 1 || co == 2 ) {
+            
+            
+            if( co == 1 ) {
 
                 RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
 
@@ -50,6 +55,7 @@ public class UpdatePasswordServlet extends HttpServlet {
             else {
                 out.println("<h1>Failed....</h1>");
             }
+            
         }
 
         catch ( SQLException | ClassNotFoundException e ){

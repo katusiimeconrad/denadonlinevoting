@@ -46,7 +46,8 @@ public class LoginServlet extends HttpServlet {
 
                     if( pwd.equals( rs.getString("Email") )  ) {
                         //If True, we forward the user to password jsp to create their password
-
+                        HttpSession session = request.getSession();
+                        session.setAttribute("StudentNumber", stdNo );
                         RequestDispatcher rd = request.getRequestDispatcher("/password.jsp");
                         rd.forward( request , response);
                         // the password.jsp will also forward the request to login.
@@ -64,7 +65,7 @@ public class LoginServlet extends HttpServlet {
 
                 else {
 
-                    String queryPassword = "SELECT * FROM Users WHERE StudentNo=" + stdNo ;// + " and Password = AES_ENCRYPT(" + pwd + ", SHA2('allanbronsonconrad', 512))";
+                    String queryPassword = "SELECT * FROM Users WHERE StudentNo='" + stdNo + "' and Password = AES_ENCRYPT('" + pwd + "', SHA2('allanbronsonconrad', 512));";
                     //select * from users where StudentNo='1800700856' and Password = AES_ENCRYPT('kone', SHA2('allanbronsonconrad', 512));
                     ResultSet rsn = st.executeQuery(queryPassword);
 

@@ -1,5 +1,14 @@
 <web-app>
-    
+   <!-- 
+    <servlet>
+        <servlet-name>OpenClosedServlet</servlet-name>
+        <servlet-class>com.denad.OpenClosedServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    -->
+
+<!-- This is the servlet that is loaded when the server starts, it will check if voting is open or closed. -->
+
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.denad.LoginServlet</servlet-class>
@@ -10,11 +19,11 @@
         <servlet-class>com.denad.UpdatePasswordServlet</servlet-class>
     </servlet>
 
-    <servlet>
-        <servlet-name>Ballot</servlet-name>
-        <servlet-class>com.denad.Ballot</servlet-class>
-    </servlet>
-
+<!--
+    <servlet-mapping>
+        <servlet-name>OpenClosedServlet</servlet-name>
+    </servlet-mapping>
+-->
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -29,6 +38,10 @@
         <servlet-name>UpdatePasswordServlet</servlet-name>
         <url-pattern>/UpdatePassword</url-pattern>
     </servlet-mapping>
+
+    <session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
 
 
     <welcome-file-list>

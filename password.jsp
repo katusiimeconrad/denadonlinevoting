@@ -7,6 +7,7 @@
     
     
     -->
+    <%= session.getAttribute("StudentNumber") %>
     <form method="POST" action="checkpassword.jsp">
         <div class="form-group">
             <label for="Password">Password</label>

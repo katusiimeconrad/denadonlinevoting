@@ -1,13 +1,17 @@
+<%@ include file="menu2.jsp" %>
+<%
+  
+  java.sql.ResultSet rs = (java.sql.ResultSet) session.getAttribute("UserInfo");
+  
+%>
+
+
 <div class="container">
     <div class="alert alert-success">
         <p>Welcome <%= session.getAttribute("FirstName") %></p>
     </div>
 
 
-<%
-    java.sql.ResultSet rs = (java.sql.ResultSet) session.getAttribute("UserInfo");
-
-%>
 
     <div>
         <h4>Your Info</h4>

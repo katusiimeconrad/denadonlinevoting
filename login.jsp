@@ -1,5 +1,11 @@
 <%@ include file="/menu1.jsp" %>
 
+<%
+    if( request.getSession() != null ){
+        session.invalidate();
+    }
+%>
+
 <div class="container">
 
     <%
